@@ -3,3 +3,15 @@
 //No son siempre utilizados
 //Tienes clousure cuando una funcion cualquiera accede a una variable fuera de su contexto
 
+function saludar(){
+    let userName = 'Lucas';
+
+    function displayUsername(){
+        return `Hello ${userName}`;
+    }
+    return displayUsername;
+}
+
+const g = saludar();
+console.log(g);
+console.log(g());
